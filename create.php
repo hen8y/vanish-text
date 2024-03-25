@@ -3,8 +3,12 @@ session_start ();
 $_SESSION['link'] = substr(str_shuffle("BCDEFxruGHgMNO0123456789aelzodAkPpRSTUW"), 0, 4);
 ;
 $page_link= $_SESSION['link'];
-$message = $_SESSION['message']= $_POST['message'];
-$name=$_SESSION['name'] = $_POST['name'];
+
+$message = $_POST['message'];
+$_SESSION['message']= $message;
+
+$name = $_POST['name'];
+$_SESSION['name'] = $name;
 
 $myfile = fopen("Message/$page_link.php", "w") or die("Unable to open file!");
 $txt = "<!DOCTYPE html>
@@ -49,7 +53,7 @@ $txt = "<!DOCTYPE html>
             </div>
           </div>
           <br>
-          <center><a href='../createmessage'>
+          <center><a href='../createmessage.php'>
                               <div type='submit' class='button'>Create A VT Message</div>
                           </a>
                           <br>
@@ -60,18 +64,9 @@ $txt = "<!DOCTYPE html>
   unlink('$page_link.php');
   ?>
 </body>
-</html>
-
-";
-
-
+</html>";
 fwrite($myfile, $txt);
 fclose($myfile);
+    header('location:messages.php');
 
-if (fwrite==0){
-    header('location:messages');
-}
-else{
- echo'failed';   
-}
 ?>

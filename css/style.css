@@ -18,8 +18,15 @@
 .container{
     width: 900px;
     margin: auto;
-
 }}
+
+.columns{
+    padding: 20px;
+}
+
+.columns:hover{
+    padding: 20px;
+}
 @media only screen and (min-width : 995px) {
  
 .oga{ 
@@ -36,9 +43,9 @@
     background: -o-linear-gradient(45deg,#10DAF1,#BE20F6);
     background: -moz-linear-gradient(45deg,#10DAF1,#BE20F6);
     background-image: linear-gradient(45deg, #10DAF1 ,#BE20F6);   
-    height: 100vh; 
-	 clear: both;
-	 display: flex;
+    min-height: 100vh; 
+    clear: both;
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -84,14 +91,13 @@ h1{
 	box-shadow:1px 1px 10px  rgb(90, 84, 84);
 }
 .content{
-    height: 70vh;
+    min-height: 70vh;
     color: #242525;
     clear: both;
 	margin-top:100px;
     width: 100%;
 }
 .content p{
-    text-align: center;
     margin-bottom: 50px;
 }
 h2{
@@ -107,12 +113,10 @@ h2{
     width:32%;
     height: 300px;
     float: left;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: #fff;
     border-radius:30px;
     padding:20px;
     font-family:'Montserrat', sans-serif;
-    text-align:center;
     cursor:pointer;   
     margin: auto;
     margin-left: 10px;
@@ -134,9 +138,11 @@ h2{
 }
 .columns h2{
     margin-top: 10px;
+    padding: 10px;
 }
 .columns p{
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 20px;
 
 }
 .ss{

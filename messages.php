@@ -1,8 +1,6 @@
 <?php
 session_start ();
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +14,7 @@ session_start ();
     <link rel="stylesheet" href="css/main.css">
     <title>Vanish Text | Messages</title>
     <link rel="shortcut icon" href="img/favico.png">
-
+    
    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8CK034656"></script>
     <script>
@@ -43,8 +41,6 @@ session_start ();
 </head>
 <body>
     <div class="container">
-
-
         <div class="main">
             </p>
             <div class="logo">
@@ -52,30 +48,30 @@ session_start ();
                 <h3> Your Message has been posted</h3>
                 <p class="success">Please Note that Message can only be viewed once</p>
                 <br>
-                <a href="createmessage">
+                <a href="createmessage.php">
                     <div type="submit" class="button">Create New Message</div>
                 </a>
                 <h4>Your Link:</h4>
             </center>
             </div>
-            <div class="link">
-                 <span id="a" >
-                    <?php 
+            <div class="cc">
+                <div class="link">
+                    <div id="a" >
+                        <?php 
             
-                    $host='https://' .$_SERVER['SERVER_NAME'];
-                    $extra=$_SESSION['link'];
-                    
-                    echo $host .'/Message/' .$extra;
-                    ?>
-                </span>
-                <span class="copy" onclick="copyDivToClipboard()">
+                        $host='https://' .$_SERVER['SERVER_NAME'];
+                        $extra=$_SESSION['link'];
+                        
+                        echo $host .'/vanishtext/Message/' .$extra.'.php';
+                        ?>
+                    </div>
+                </div>
+                <div class="copy" onclick="copyDivToClipboard()">
                     click to copy
-                </span>
-             </div>
-             
+                </div>
+            </div>
              <br><br>
            <div>
-
             <br>
             <div class="messages">
                 <h3>Message:</h3>
@@ -84,15 +80,8 @@ session_start ();
                 </p>
             </div>
             <br>
-
-           
-
-
            </div>
         </div>
-
-
-
     </div>
 </body>
 </html>
